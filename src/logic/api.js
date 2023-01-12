@@ -95,8 +95,3 @@ export const postAPI = {
   unReact: async postId => exec((() => axios.put(`${API_URL}/post/un-react/${postId}`, {}, axiosOpts))),
   getComments: async (postId, page) => exec(() => axios.get(`${API_URL}/comments/${postId}?page=${page}`))
 }
-
-// setTimeout(() => {
-//   userAPI.update({fullName: 'Thinh Vu', avatar: 'https://fs.tvux.me/api/1672473860519-tvux_avatar.jpg'}).then((rs) => console.log(rs))
-// }, 2000)
-window.axi = axiosOpts;
