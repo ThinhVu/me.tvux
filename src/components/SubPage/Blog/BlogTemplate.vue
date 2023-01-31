@@ -84,7 +84,7 @@ const layouts = {
     },
     thread: {
       klass: 'w-100 fr fg-1 ovf-x-s hide-scroll-bar',
-      style: 'height: 36px; grid-area: thread'
+      style: 'height: 0px; grid-area: thread'
     }
   },
   small: {
@@ -102,7 +102,7 @@ const layouts = {
     },
     thread: {
       klass: 'w-100 fr fg-1 ovf-x-s hide-scroll-bar',
-      style: 'height: 36px; grid-area: thread'
+      style: 'height: 0px; grid-area: thread'
     }
   }
 }
