@@ -8,7 +8,7 @@
     <div class="fr ai-c fg-1 jc-c" style="background: rgba(0,0,0,0.69); border-top: 1px solid #222; height: 50px">
       <spacer/>
 
-      <button v-if="!user" class="btn" @click="login">
+      <button v-if="!user" class="btn" @click="showAuthDialog">
         <icon class="icon">fas fa-user@16</icon>
       </button>
 
@@ -37,12 +37,11 @@ import {user} from '@/appState';
 import dialog from '@/components/UiLib/Api/dialog';
 import Icon from '@/components/UiLib/Icon';
 import Spacer from '@/components/UiLib/Spacer';
-import AuthDialog from '@/components/AuthDialog';
 import ContactInfo from '@/components/ContactInfo';
+import {showAuthDialog} from '@/appState';
 
 const myFeed = computed(() => user.value && `/newfeed`);
 const open = url => window.open(url, '_blank')
-const login = async () => await dialog.show({component: AuthDialog})
 const showContact = async () => await dialog.show({component: ContactInfo})
 </script>
 <style scoped>

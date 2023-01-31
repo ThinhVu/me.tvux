@@ -54,7 +54,7 @@ export function parseContent(input) {
 
 import _ from 'lodash';
 import dayjs from 'dayjs';
-import api from '@/api';
+import api from '@/logic/api';
 import notification from '@/components/UiLib/Api/notification';
 
 export function readableMs(ms) {

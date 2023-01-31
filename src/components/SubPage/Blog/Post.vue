@@ -3,7 +3,7 @@
     <!-- Avatar -->
     <div class="fr fg-1 px-2">
       <div>
-        <img style="width: 40px; height: 40px; border-radius: 20px; border: 1px solid #444"
+        <imgx style="width: 40px; height: 40px; border-radius: 20px; border: 1px solid #444"
              :src="post.byUser.avatar" draggable="false"/>
       </div>
       <div>
@@ -14,8 +14,8 @@
       </div>
       <spacer/>
       <div>
-        <span v-if="post.textEn" class="px-2" :class="showEn ? 'bc-gray-4' : 'bc-gray-2'" @click="showVietnamese(true)">En</span>
-        <span v-if="post.textVi" class="px-2" :class="showEn ? 'bc-gray-2' : 'bc-gray-4'" @click="showVietnamese(false)">Vi</span>
+        <span v-if="post.textEn" class="px-2 clickable" :class="showEn ? 'bc-gray-4' : 'bc-gray-2'" @click="showVietnamese(true)">En</span>
+        <span v-if="post.textVi" class="px-2 clickable" :class="showEn ? 'bc-gray-2' : 'bc-gray-4'" @click="showVietnamese(false)">Vi</span>
       </div>
     </div>
 
@@ -40,9 +40,9 @@
     <div class="fr ai-c fg-2 px-2 py-1 fs-s">
       <react-detail :react="post.react"/>
       <spacer/>
-      <div @click="onShowComments">Comments ({{ post.commentCount }})</div>
+      <div class="clickable" @click="onShowComments">Comments ({{ post.commentCount }})</div>
       <react-button :post="post"/>
-      <div @click="sharePost">Share</div>
+      <div class="clickable" @click="sharePost">Share</div>
       <template v-if="isOwner">
         <div @click="pinPost">{{post.pinned ? 'Unpin' : 'Pin' }}</div>
         <div @click="removePost">Delete</div>
@@ -75,6 +75,7 @@ import MediaPanel from './MediaPanel';
 import Comment from './Comment';
 import NewComment from './NewComment';
 import TimeSpan from '@/components/TimeSpan';
+import Imgx from '@/components/Imgx';
 
 const props = defineProps({post: Object})
 const emit = defineEmits(['deleted'])

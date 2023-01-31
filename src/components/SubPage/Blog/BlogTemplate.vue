@@ -10,7 +10,7 @@
            style="min-width: 150px" @click="createCategory">New Category</div>
       <router-link v-for="cate in categories" :key="cate._id"
                    :to="`/newfeed?uid=${uid}&cid=${cate._id}&name=${kebabCase(cate.name)}`"
-                   style="flex-shrink: 0"
+                   style="flex-shrink: 0; text-decoration: none"
                    class="ta-l px-2 py-1 fw-6 clickable"
                    :class="sltCategory === cate._id ? 'bc-gray-1 c-gray-9' : 'c-gray-0'">
         {{cate.name}}
@@ -72,7 +72,7 @@ const layouts = {
   medium: {
     container: {
       klass: ' py-2 px-2',
-      style: 'display: grid; grid-gap: 10px; grid-template-rows: 36px 36px 1fr; grid-template-areas: \'category\' \'thread\' \'post\''
+      style: 'display: grid; grid-gap: 5px; grid-template-rows: 36px 0px 1fr; grid-template-areas: \'category\' \'thread\' \'post\''
     },
     category: {
       klass: 'w-100 fr fg-1 ovf-x-s hide-scroll-bar',
@@ -90,7 +90,7 @@ const layouts = {
   small: {
     container: {
       klass: '',
-      style: 'display: grid; grid-gap: 10px; grid-template-rows: 36px 36px 1fr; grid-template-areas: \'category\' \'thread\' \'post\''
+      style: 'display: grid; grid-gap: 2px; grid-template-rows: 36px 0px 1fr; grid-template-areas: \'category\' \'thread\' \'post\''
     },
     category: {
       klass: 'w-100 fr fg-1 ovf-x-s hide-scroll-bar',

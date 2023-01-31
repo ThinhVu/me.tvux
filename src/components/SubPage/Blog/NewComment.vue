@@ -6,13 +6,14 @@
               style="min-height: 60px; border: 1px solid #aaa"/>
     <button @click="addComment">Add</button>
   </div>
-  <p v-else class="fs-s ta-c">Login to comment</p>
+  <p v-else class="fs-s ta-c clickable" @click="showAuthDialog">Login to comment</p>
 </template>
 <script setup>
 import {ref, watch, computed} from 'vue';
 import {postAPI} from '@/logic/api';
 import {user} from '@/appState';
 import TxtArea from '@/components/UiLib/TxtArea';
+import {showAuthDialog} from '@/appState';
 
 const props = defineProps({
   post: Object,

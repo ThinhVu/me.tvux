@@ -1,13 +1,15 @@
 <template>
-  <div class="px-4 py-4 br-10 mx-a fc fg-1"
-       style="backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.3); min-width: 400px">
-    <p><txt v-model="email" class="w-100" placeholder="Email"/></p>
-    <p><txt v-model="password" class="w-100" placeholder="Password"/></p>
-    <div class="fr ai-c fg-1 mt-2">
-      <button @click="cancel">x</button>
-      <button @click="signUp">Sign Up</button>
-      <spacer/>
-      <button @click="signIn">Sign In</button>
+  <div class="w-100 h-100 fr ai-c fix" style="z-index: 999;">
+    <div class="px-4 py-4 br-10 mx-a fc fg-1"
+         style="border: 1px solid rgba(255,255,255,0.2); background: rgb(113 113 113); min-width: 400px">
+      <p><txt v-model="email" class="w-100" placeholder="Email"/></p>
+      <p><txt v-model="password" class="w-100" placeholder="Password"/></p>
+      <div class="fr ai-c fg-1 mt-2">
+        <button @click="cancel">x</button>
+        <button @click="signUp">Sign Up</button>
+        <spacer/>
+        <button @click="signIn">Sign In</button>
+      </div>
     </div>
   </div>
 </template>
