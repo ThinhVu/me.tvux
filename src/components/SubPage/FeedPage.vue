@@ -1,7 +1,7 @@
 <template>
   <blog-template>
-    <div class="fc fg-1" style="max-width: 700px; margin: 0 auto">
-      <new-post v-if="isOwner" class="w-100 bc-gray-1 ta-l clickable" @post="createPost" :available-categories="categories"/>
+    <div class="fc fg-2" style="max-width: 700px; margin: 0 auto">
+      <new-post v-if="isOwner" class="w-100 bc-gray-1 ta-l clickable mt-2" @post="createPost" :available-categories="categories"/>
       <post v-for="post in posts" :key="post._id" :post="post" @deleted="onPostDeleted"/>
       <div v-if="canLoadMorePost" class="clickable c-gray-0 mb-2" @click="loadMorePosts">more</div>
       <dot3 v-if="loadingPost" class="c-gray-0"/>

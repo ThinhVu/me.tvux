@@ -2,17 +2,18 @@
   <div class="w-100 h-100"
        :class="layout.container.klass"
        :style="layout.container.style">
+
     <!-- Category -->
     <div :class="layout.category.klass"
          :style="layout.category.style">
       <div v-if="isOwner"
-           class="ta-l px-2 py-1 fw-6 bc-gray-1 c-gray-9 clickable"
-           style="min-width: 150px" @click="createCategory">New Category</div>
+           class="ta-l px-2 py-1 fw-6 clickable"
+           style="min-width: 150px; color: #0066bf" @click="createCategory">New Category</div>
       <router-link v-for="cate in categories" :key="cate._id"
                    :to="`/newfeed?uid=${uid}&cid=${cate._id}&name=${kebabCase(cate.name)}`"
                    style="flex-shrink: 0; text-decoration: none"
                    class="ta-l px-2 py-1 fw-6 clickable"
-                   :class="sltCategory === cate._id ? 'bc-gray-1 c-gray-9' : 'c-gray-0'">
+                   :style="sltCategory === cate._id ? 'color: #050505; background-color: #fff; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2)' : 'color: #050505'">
         {{cate.name}}
       </router-link>
     </div>
@@ -53,11 +54,11 @@ onBeforeMount(adjustLayout);
 const layouts = {
   large: {
     container: {
-      klass: 'fr ai-c fg-3 py-2 px-2',
+      klass: 'fr ai-c fg-3 px-2',
       style: ''
     },
     category: {
-      klass: 'h-100 f2 fc fg-1',
+      klass: 'h-100 f2 fc fg-1 pt-2 ovf-y-s hide-scroll-bar',
       style: 'max-width: 240px'
     },
     post: {
@@ -71,7 +72,7 @@ const layouts = {
   },
   medium: {
     container: {
-      klass: ' py-2 px-2',
+      klass: 'px-2',
       style: 'display: grid; grid-gap: 5px; grid-template-rows: 36px 0px 1fr; grid-template-areas: \'category\' \'thread\' \'post\''
     },
     category: {

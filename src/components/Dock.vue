@@ -1,11 +1,11 @@
 <template>
-  <div class="w-100vw h-100vh">
-    <div class="rel" style="height: calc(100% - 50px);">
+  <div class="w-100vw h-100vh rel">
+    <div class="rel h-100" style="padding-top: 50px">
       <div class="w-100 h-100 ovf-h" style="z-index: 1">
         <slot></slot>
       </div>
     </div>
-    <div class="fr ai-c fg-1 jc-c" style="background: rgba(0,0,0,0.69); border-top: 1px solid #222; height: 50px">
+    <div class="abs top-0 left-0 w-100 fr ai-c fg-1 jc-c bc-white" style="box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); height: 50px">
       <spacer/>
 
       <button v-if="!user" class="btn" @click="showAuthDialog">

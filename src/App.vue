@@ -3,7 +3,7 @@
     <bg/>
     <api/>
     <auth-dialog v-if="authDialogVisible" @close="hideAuthDialog"/>
-    <dock style="background: linear-gradient(90deg,#303741,#06070c);">
+    <dock style="background: #F0F2F5">
       <div class="w-100 h-100">
         <router-view #default="{ Component }">
           <component :is="Component"/>

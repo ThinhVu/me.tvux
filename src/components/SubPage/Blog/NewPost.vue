@@ -1,5 +1,5 @@
 <template>
-  <div class="fc fg-1 pt-2">
+  <div class="fc fg-1 pt-2 br-1 ovf-h" style="box-shadow: 0 1px 2px rgba(0,0,0, 0.2)">
     <div class="px-2">
       <div class="fr ai-c mb-2">
         <span class="px-2" :class="vieContent ? 'bc-gray-4' : 'bc-gray-2'" @click="vieContent = true">Vi</span>
