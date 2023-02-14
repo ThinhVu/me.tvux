@@ -1,5 +1,5 @@
 <template>
-  <div class="br-6 px-2" style="max-width: 600px; font-size: 40px; color: #fff; font-family: fantasy;">
+  <div class="br-6 px-2" style="max-width: 600px; font-size: 40px; color: rgb(62 62 62); font-family: fantasy;">
     {{ quote }}
   </div>
 </template>
