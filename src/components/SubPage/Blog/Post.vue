@@ -1,5 +1,5 @@
 <template>
-  <div class="w-100 bc-gray-1 ta-l pt-2 br-1" style="box-shadow: 0 1px 2px rgba(0,0,0, 0.2)">
+  <div class="w-100 bc-white ta-l pt-2 br-1" style="box-shadow: 0 1px 2px rgba(0,0,0, 0.2)">
     <!-- Avatar -->
     <div class="fr fg-1 px-2">
       <div>

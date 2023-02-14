@@ -58,7 +58,7 @@ const layouts = {
       style: ''
     },
     category: {
-      klass: 'h-100 f2 fc fg-1 pt-2 ovf-y-s hide-scroll-bar',
+      klass: 'h-100 f2 fc fg-1 pt-2 px-1 ovf-y-s hide-scroll-bar',
       style: 'max-width: 240px'
     },
     post: {

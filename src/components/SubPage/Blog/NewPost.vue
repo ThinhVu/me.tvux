@@ -47,13 +47,13 @@
         <icon @click="removePendingVideos">fas fa-x@16</icon>
       </p>
     </div>
-    <div class="ovf-x-s hide-scroll-bar fr ai-c px-2 fg-1 py-1 bc-gray-4">
+    <div class="ovf-x-s hide-scroll-bar fr ai-c px-2 fg-1 py-1 bc-gray-2">
       <a href="https://janguillermo.github.io/vue3-markdown-it/" target="_blank">?</a>
       <spacer/>
-      <button @click="addEmoji">Emoji</button>
-      <button @click="addAudio">Audio</button>
-      <button @click="addPhotos">Photos</button>
-      <button @click="addVideos">Videos</button>
+      <button @click="addEmoji" class="bc-white">Emoji</button>
+      <button @click="addAudio" class="bc-white">Audio</button>
+      <button @click="addPhotos" class="bc-white">Photos</button>
+      <button @click="addVideos" class="bc-white">Videos</button>
       <button @click="post" class="bc-b-6 c-gray-0">Post</button>
     </div>
   </div>
