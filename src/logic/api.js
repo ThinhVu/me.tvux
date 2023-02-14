@@ -67,7 +67,7 @@ export const userAPI = {
     try {
       const {data} = (await axios.get(`${API_URL}/auth-user`, {headers: {Authorization: `bearer ${token}`}})).data;
       if (data.token) {
-        _saveAuthSession(data);
+        await _saveAuthSession(data);
       } else {
         console.log('Auth failed')
       }

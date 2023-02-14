@@ -1,6 +1,6 @@
 import {useRoute} from 'vue-router';
 import {categoryAPI} from '@/logic/api';
-import {ref, computed, onBeforeMount} from 'vue';
+import {ref, computed, onBeforeMount, onMounted} from 'vue';
 import {user} from '@/appState';
 
 export default function () {
